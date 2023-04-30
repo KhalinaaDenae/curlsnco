@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gruppo&family=Julius+Sans+One&family=Marcellus&family=Poiret+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #E6E1D2;
+}
+:root{
+    --main-bg-color:#1B201E;
+    --light-green-accent-color:#6C7463;
+    --orange-accent-color:#9D3C02;
+    --h2-heading-font:'Julius Sans One', sans-serif;
+    --main-p-text:'Poiret One', cursive;
+    --logo: 'Abril Fatface', cursive;
+    --accent-font: 'Gruppo', cursive;
+}
+/* typography */
+a{
+  list-style-type: none;
+  text-decoration: none;
+}
+.gallery-services{
+  font-size: 2rem;
+  font-family: var(--h2-heading-font);
+}
+.logo{
+    font-family: var(--logo);
+    font-size: 3rem;
+}
+nav li{
+    font-family: '';
+}
+#about h2{
+    font-family: var(--h2-heading-font);
+}
+#about p{
+    font-family: var(--main-p-text);
+}
+.services-header{
+    font-size: 5rem;
+    font-family: var(--h2-heading-font);
+    padding: 30px;
+    text-align: center;
+}
+h2{
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.team-header{
+    text-align: center;
+    font-family: var(--h2-heading-font);
+    letter-spacing: 3px;
+    font-size: 4rem;
+}
+#services h4{
+    font-family: var(--main-p-text);
+}
+.acc-btn{
+  font-family: var(--h2-heading-font);
+}
+/* N A V I G A T I O N */
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: var(--main-bg-color);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+.logo{
+  margin: 0 auto;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #E6E1D2;
+}
+nav .menu-btn i{
+  color: #E6E1D2;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: var(--orange-accent-color)
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* N A V I G A T I O N end */
+
+/* Home : hero section */
+.hero-img-ctnr{
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-img{
+    width: 95vw;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 900px){
+    .hero-img-ctnr{
+  height: 60vh;
+}
+.hero-img{
+    height: 50vh;
+}
+    
+}
+
+@media only screen and (max-width: 500px){
+    .hero-img-ctnr{
+  height: 50vh;
+}
+.hero-img{
+    height: 40vh;
+}
+    
+}
+/* hero section end */
+
+
+/* home : about section */
+
+#about{
+    background-color: var(--main-bg-color);
+    width: 100vw;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.about-intro-ctnr, .about-text, .about-techniques{
+    display: flex;
+    align-items: center;
+}
+#about h2{
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+/* about intro */
+.about-intro-ctnr{
+  width: 70vw;
+  margin: 0 auto;
+  padding: 50px;
+}
+.about-intro-text{
+    line-height: 30px;
+    font-size: 1.3rem;
+    padding-left: 50px;
+}
+.about-intro-header{
+    padding-right: 90px;
+}
+/* about text */
+.about-text{
+    width: 90vw;
+    margin: 0 auto;
+    padding: 40px;
+}
+.about-header{
+    padding-right: 150px;
+}
+.about{
+    width: 80%;
+    margin-left: 90px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+
+
+/* about video */
+  
+.about-video-ctnr p {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 140%;
+    margin: auto;
+    text-align: center;
+    transform: translateY(50%);
+  }
+
+  video {
+    position: relative;
+    z-index: 0;
+  }
+  .video-overlay-text{
+width: 70%;
+line-height: 55px;
+font-size: 2.5rem;
+  }
+
+/* about techniques */
+.about-techniques{
+    width: 90vw;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.about-techniques-img, .team-img{
+    box-shadow: -10px 6px var(--orange-accent-color);
+}
+.about-techniques-text{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+}
+.techniques-header{
+    margin-bottom: 20px;
+}
+#about li {
+    list-style: none;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 1000px){
+    .about-intro-ctnr{
+        flex-direction: column;
+    }
+    .about-intro-header{
+        text-align: center;
+        padding: 0;
+        width: 80vw;
+        padding-bottom: 15px;
+    }
+    .about-intro-text{
+        width: 95vw;
+        font-size: 1rem;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+    .video-overlay-text{
+        display: none;
+    }
+    .about-text{
+        flex-direction: column;
+    }
+    .about{
+        width: 95%;
+        margin: 0;
+        letter-spacing: normal;
+        line-height: normal;
+        font-size: 1rem;
+    }
+    .about-header{
+        padding: 0;
+    }
+ .about-techniques{
+    flex-direction: column;
+ }
+ #about h2{
+    font-size: 1.5rem;
+ }
+ .about-techniques-text{
+    width: 90%;
+    padding: 20px 0;
+ }
+ .about-img{
+    width: 300px;
+
+ }
+}
+
+
+/* home : services */
+.services-header{
+    font-size: 5rem;
+}
+#services{
+    background-color: var(--main-bg-color);
+    height: auto;
+    width: 100vw;
+    padding: 90px 0 ;
+}
+#services a{
+    text-decoration: none;
+}
+.services-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cut, .color, .bigchop{
+  width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.serviceimg{
+    width: 30%;
+    height: 40vh;
+    padding: 3px;
+    position: relative;
+}
+.service-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size:3rem;
+  }
+  @media only screen and (max-width: 800px){
+    .services-header{
+        font-size: 2.5rem;
+    }
+    .serviceimg{
+        width: 80%;
+        margin: 0 auto;
+        height: 30vh;
+    }
+    .service-text{
+        font-size: 1.5rem;
+    }
+    .services-container{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px){
+ 
+    .serviceimg{
+        width: 70%;
+        height: 20vh;
+    }
+ 
+}
+
+  /* meet the team start */
+
+#team{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+.team-ctnr{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-img{
+    width: 50%;
+    margin: 0 auto;
+}
+.team-about{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 30px;
+    padding: 30px;
+    font-family: var(--main-p-text);
+    text-align: center;
+}
+@media only screen and (max-width: 800px){
+    .team-header{
+        font-size: 2.5rem;
+    }
+    .team-about{
+        width: 90%;
+        line-height: normal;
+        letter-spacing: normal;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .team-img{
+    width: 80%;    
+}
+}
+@media only screen and (max-width: 600px){
+#team{
+  height: 70vh;
+}
+}
+  /* meet the team end */
+
+  /* faq start */
+.faq-section-header{
+  font-family: var(--h2-heading-font);
+  font-size: 4rem;
+  text-align: center;
+}
+#faq{
+  background-image: url(images/faq.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.faq-flex-ctnr{
+  display: flex;
+justify-content: space-between;
+flex-direction: column;
+}
+.faq{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 70%;
+  margin: 0 auto;
+}
+.faq-header{
+  font-family: var(--h2-heading-font);
+  font-size: 1.3rem;
+  color: var(--orange-accent-color);
+  width: 85%;
+}
+.faq-text{
+  font-family: var(--main-p-text);
+  width: 95%;
+}
+@media only screen and (max-width: 900px){
+ #faq{
+  height: 110vh;
+ }
+ .faq-section-header{
+  font-size: 2rem;
+ }
+ .faq{
+  width: 90%;
+  padding-top: 20px;
+ }
+}
+@media only screen and (max-width: 700px){
+  #faq{
+   height: 110vh;
+  }
+  .faq{
+    margin-bottom: 30px;
+  }
+  .faq{
+   width: 95%;
+   padding:0;
+  }
+ }
+/* services : New client section */
+
+.new-clients-ctnr{
+    background-color: var(--main-bg-color);
+    height: 60vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-client-header{
+    font-size: 3rem;
+}
+p.new-client{
+    line-height: 30px;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+@media only screen and (max-width: 950px){
+    .new-clients-ctnr{
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+    .new-client-header{
+        text-align: center;
+    }
+    p.new-client{
+        width: 97%;
+        font-size: 1rem;
+    }
+}
+
+/* services : New client section */
+
+/* services : hero section */
+.service-hero-ctnr{
+    height: 50vh;
+    background-image: url('images/Screen\ Shot\ 2023-04-28\ at\ 9.32.58\ PM.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hair-servie-page-header{
+    font-size: 5rem;
+  }
+
+/* testimonial */
+
