@@ -27,6 +27,7 @@ main{
     width: 100%;
     height: 100%;
     padding: 20px;
+    box-shadow: -10px 6px var(--orange-accent-color);
 }
 .services-text-container {
     background:transparent;
